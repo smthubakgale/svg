@@ -52,7 +52,7 @@ $("#mainSVG2").mousemove((ev)=>
            oq.attr("x", x);
            oq.attr("y", y);
        } 
-    } , 300); 
+    } , 30); 
      
 });
 //: drop
@@ -61,7 +61,7 @@ $("#mainSVG2").mouseup((ev) => {
     {
         console.log("MF");
         drop(ev); 
-    } , 200);
+    } , 20);
 });
 $("#mainSVG2").mouseleave((ev) => { drop(ev); });
 
