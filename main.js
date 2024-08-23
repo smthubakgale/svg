@@ -1,12 +1,11 @@
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~METADATA ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//---: METADATA 
 $(window).on("load", function()
 {
     var meta = $("#mainSVG2 metadata").html();
     console.log(meta);
     //$("#mainSVG2 metadata author name").html("Gyatsu")
 });
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~DRAG AND DROP -- CHANGE PARENT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-
+//---: DRAG AND DROP 
 //: select
 var os = null;
 function objectCloneGet(ts)
@@ -29,11 +28,11 @@ $("#mainSVG2").mouseenter(()=>
       }  
     
 });
-
+//
 var om = false;
 var me;
-
-function move(ts){
+function move(ts)
+{
     console.log("MD");
     om = true;
     me = $(ts);
@@ -54,16 +53,12 @@ $("#mainSVG2").mousemove((ev)=>
      
 });
 //: drop
-$("#mainSVG2").mouseup((ev)=>
-{ 
-      drop(ev);
-});
-$("#mainSVG2").mouseleave((ev)=>
-{ 
-      drop(ev);
-});
+$("#mainSVG2").mouseup((ev) => { drop(ev); });
+$("#mainSVG2").mouseleave((ev) => { drop(ev); });
+
 function drop(ev)
 {
    op = false;
    om = false;
 }
+//---: 
