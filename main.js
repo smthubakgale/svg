@@ -3,7 +3,7 @@ $(window).on("load", function()
 {
     var meta = $("#mainSVG2 metadata").html();
     console.log(meta);
-    $("#mainSVG2 metadata author").html("Gyatsu")
+    //$("#mainSVG2 metadata author").html("Gyatsu")
 });
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~DRAG AND DROP -- CHANGE PARENT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
