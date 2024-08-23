@@ -15,26 +15,24 @@ function objectCloneGet(ts)
     os.attr("onclick",null); 
     
 }
-var op = false;
-var oq ;
+var op = false; 
 $("#mainSVG2").mouseenter(()=>
 { 
       if(os != null)
       {
           var obj = os.clone();
-          $('#mainSVG2').append(obj); 
-          
+          $('#mainSVG2').append(obj);  
           os = null;
-          op = true;
-          //oq = obj;
+          op = true; 
       }  
     
 });
 
 $("#mainSVG2").mousemove((ev)=>
 { 
-      if(op == true && false)
+      if(op == true)
       {
+          var oq = $('#mainSVG2').children().last();
           var x = ev.pageX;
           var y = ev.pageY;
 
