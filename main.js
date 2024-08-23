@@ -28,6 +28,8 @@ $("#mainSVG2").mouseenter(()=>
     
 });
 
+var om = false;
+var me;
 $("#mainSVG2").mousemove((ev)=>
 { 
       if(op == true)
@@ -40,7 +42,9 @@ $("#mainSVG2").mousemove((ev)=>
           oq.attr("x", x);
           oq.attr("y", y);
       }  
-    
+    if(om == true){
+        
+    }
 });
 
 $("#mainSVG2").mouseup((ev)=>
@@ -59,8 +63,12 @@ function drop(ev)
         var oq = $('#mainSVG2').children().last();
         oq.on("click", function()
         {
-            
+            om = true;
+            me = oq;
         });
         op = false;
+    }
+    if(om == true){
+        om = false;
     }
 }
