@@ -40,28 +40,21 @@ function move(ts)
 //: move 
 $("#mainSVG2").mousemove((ev)=>
 { 
-    setTimeout(function()
+    if(op == true || om == true)
     {
-       if(op == true || om == true)
-       {
-           var oq = (om == true) ? me : $('#mainSVG2').children().last();
-           var x = ev.pageX - $('#mainSVG2').offset().left;
-           var y = ev.pageY - $('#mainSVG2').offset().top;
+       var oq = (om == true) ? me : $('#mainSVG2').children().last();
+       var x = ev.pageX - $('#mainSVG2').offset().left;
+       var y = ev.pageY - $('#mainSVG2').offset().top;
 
-           console.log(x , y , typeof(oq));
-           oq.attr("x", x);
-           oq.attr("y", y);
-       } 
-    } , 30); 
-     
+       //console.log(x , y , typeof(oq));
+       oq.attr("x", x);
+       oq.attr("y", y);
+    }  
 });
 //: drop
 $("#mainSVG2").mouseup((ev) => { 
-    setTimeout(function()
-    {
-        console.log("MF");
-        drop(ev); 
-    } , 20);
+    console.log("MF");
+    drop(ev);
 });
 $("#mainSVG2").mouseleave((ev) => { drop(ev); });
 
