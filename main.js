@@ -15,37 +15,40 @@ function objectCloneGet(ts)
     os.attr("onclick",null); 
     
 }
-var op = null;
+var op = false;
+var oq ;
 $("#mainSVG2").mouseenter(()=>
 { 
       if(os != null)
       {
           var obj = os.clone();
           os = null;
-          op = obj;
-          $('#mainSVG2 g').append(obj);
+          $('#mainSVG2 g').append(obj); 
+          op = true;
+          oq = obj;
       }  
     
 });
 
 $("#mainSVG2").mousemove((ev)=>
 { 
-      if(op != null)
+      if(op == true)
       {
           var x = ev.pageX;
           var y = ev.pageY;
 
-          op.attr("x", x);
-          op.attr("y", y);
+          console.log(x , y);
+          oq.attr("x", x);
+          oq.attr("y", y);
       }  
     
 });
 
 $("#mainSVG2").mouseup(()=>
 { 
-      op = null; 
+      op = false; 
 });
 $("#mainSVG2").mouseleave(()=>
 { 
-      op = null; 
+      op = false; 
 });
