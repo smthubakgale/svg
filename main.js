@@ -7,6 +7,7 @@ $(window).on("load", function()
 });
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~DRAG AND DROP -- CHANGE PARENT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
+//: select
 var os = null;
 function objectCloneGet(ts)
 { 
@@ -31,6 +32,13 @@ $("#mainSVG2").mouseenter(()=>
 
 var om = false;
 var me;
+
+function move(ts){
+    console.log("MD");
+    om = true;
+    me = $(ts);
+}
+//: move 
 $("#mainSVG2").mousemove((ev)=>
 { 
       if(op == true || om == true)
@@ -39,13 +47,13 @@ $("#mainSVG2").mousemove((ev)=>
           var x = ev.pageX - $('#mainSVG2').offset().left;
           var y = ev.pageY - $('#mainSVG2').offset().top;
 
-          console.log(x , y);
+          console.log(x , y , typeof(oq));
           oq.attr("x", x);
           oq.attr("y", y);
       }  
      
 });
-
+//: drop
 $("#mainSVG2").mouseup((ev)=>
 { 
       drop(ev);
@@ -54,19 +62,8 @@ $("#mainSVG2").mouseleave((ev)=>
 { 
       drop(ev);
 });
-
-function move(ts){
-    console.log("MD");
-    om = true;
-    me = $(ts);
-}
 function drop(ev)
 {
-    if(op == true)
-    { 
-        op = false;
-    }
-    if(om == true){
-        om = false;
-    }
+   op = false;
+   om = false;
 }
