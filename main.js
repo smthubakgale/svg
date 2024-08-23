@@ -3,7 +3,7 @@ $(window).on("load", function()
 {
     var meta = $("#mainSVG2 metadata").html();
     console.log(meta);
-    var doc = $.parseXML(meta));
+    var doc = $.parseXML(meta);
 
     $(doc).find("author").text("Gyatsu");
 
