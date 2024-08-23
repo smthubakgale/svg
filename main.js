@@ -15,15 +15,29 @@ function objectCloneGet(ts)
     os.attr("onclick",null); 
     
 }
-
+var op = null;
 $("#mainSVG2").mouseenter(()=>
-{
-    console.log("A");
+{ 
       if(os != null)
       {
           var obj = os.clone();
           os = null;
+          op = obj;
           $('#mainSVG2 g').append(obj);
       }  
     
+});
+
+$("#mainSVG2").mousemove(()=>
+{ 
+      if(op != null)
+      {
+          
+      }  
+    
+});
+
+$("#mainSVG2").mouseup(()=>
+{ 
+      op = null; 
 });
