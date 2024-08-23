@@ -18,10 +18,10 @@ function objectCloneGet(ts)
 var op = false; 
 $("#mainSVG2").mouseenter(()=>
 { 
-      if(os != null)
+      if(os != null && op == false && om == false)
       {
           var obj = os.clone();
-          obj.attr("mousedown","move(this)");
+          obj.attr("onclick","move(this)");
           $('#mainSVG2').append(obj);  
           os = null;
           op = true; 
