@@ -60,6 +60,8 @@ function objectCloneDrop(ev, dropzone) {
     if (isDragging == true) {
         var objectReplica = objectToClone.cloneNode(true);
 
+        console.log(ev.offsetX);
+        
         objectReplica.setAttribute('x', ev.offsetX);
         objectReplica.setAttribute('y', ev.offsetY);
 
@@ -116,6 +118,7 @@ function reAppend(dropzone) {
 }
 
 function moveObject(ev, target) {
+    console.log(targetObject);
     if (targetObject.isMoveable == true) {
         if (targetObject.isClickedOnce == true) {
         offx = ev.pageX - targetObject.toRePosition.getAttribute('x');
