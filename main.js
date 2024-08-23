@@ -28,11 +28,15 @@ $("#mainSVG2").mouseenter(()=>
     
 });
 
-$("#mainSVG2").mousemove(()=>
+$("#mainSVG2").mousemove((ev)=>
 { 
       if(op != null)
       {
-          
+          var x = ev.pageX;
+          var y = ev.pageY;
+
+          op.attr("x", x);
+          op.attr("y", y);
       }  
     
 });
