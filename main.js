@@ -16,13 +16,14 @@ function objectCloneGet(ts)
     
 }
 
-$("#mainSVG1").mouseenter(()=>
+$("#mainSVG2").mouseenter(()=>
 {
+    console.log("A");
       if(os != null)
       {
           var obj = os.clone();
           os = null;
-          $('#mainSVG1').append(obj);
+          $('#mainSVG2 g').append(obj);
       }  
     
 });
