@@ -21,7 +21,7 @@ $("#mainSVG2").mouseenter(()=>
       if(os != null && op == false && om == false)
       {
           var obj = os.clone();
-          obj.attr("onclick","move(this)");
+          obj.attr("onmousedown","move(this)");
           $('#mainSVG2').append(obj);  
           os = null;
           op = true; 
