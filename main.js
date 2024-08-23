@@ -22,17 +22,18 @@ $("#mainSVG2").mouseenter(()=>
       if(os != null)
       {
           var obj = os.clone();
+          $('#mainSVG2').append(obj); 
+          
           os = null;
-          $('#mainSVG2 g').append(obj); 
           op = true;
-          oq = obj;
+          //oq = obj;
       }  
     
 });
 
 $("#mainSVG2").mousemove((ev)=>
 { 
-      if(op == true)
+      if(op == true && false)
       {
           var x = ev.pageX;
           var y = ev.pageY;
