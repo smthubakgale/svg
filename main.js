@@ -3,15 +3,7 @@ $(window).on("load", function()
 {
     var meta = $("#mainSVG2 metadata").html();
     console.log(meta);
-    console.log($.xml2json(meta));
-    
-    var doc = $.parseXML(meta);
-
-    $(doc).find("author").text("Gyatsu");
-
-    meta =str = (new XMLSerializer()).serializeToString(doc);
-    console.log(meta);
-    $("#mainSVG2 metadata").html(meta);
+    $("#mainSVG2 metadata author").html("Gyatsu")
 });
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~DRAG AND DROP -- CHANGE PARENT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
