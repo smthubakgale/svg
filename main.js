@@ -21,6 +21,7 @@ $("#mainSVG2").mouseenter(()=>
       if(os != null)
       {
           var obj = os.clone();
+          obj.attr("mousedown","move(this)");
           $('#mainSVG2').append(obj);  
           os = null;
           op = true; 
@@ -54,16 +55,15 @@ $("#mainSVG2").mouseleave((ev)=>
       drop(ev);
 });
 
+function move(ts){
+    console.log("MD");
+    om = true;
+    me = $(ts);
+}
 function drop(ev)
 {
     if(op == true)
-    {
-        var oq = $('#mainSVG2').children().last();
-        oq.on("click", function()
-        {
-            om = true;
-            me = oq;
-        });
+    { 
         op = false;
     }
     if(om == true){
