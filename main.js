@@ -6,7 +6,7 @@ $(window).on("load", function()
     var xm = $($.parseXML(meta));
 
     xm.find("author").text("Gyatsu");
-    $("#mainSVG2 metadata").html(xm);
+    $("#mainSVG2 metadata").html(xm.text());
 });
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~DRAG AND DROP -- CHANGE PARENT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
