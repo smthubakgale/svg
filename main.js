@@ -3,7 +3,10 @@ $(window).on("load", function()
 {
     var meta = $("#mainSVG2 metadata").html();
     console.log(meta);
-    var xm = $($.parseXml(meta))
+    var xm = $($.parseXML(meta));
+
+    xm.find("author").text("Gyatsu");
+    $("#mainSVG2 metadata").html(xm);
 });
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~DRAG AND DROP -- CHANGE PARENT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
