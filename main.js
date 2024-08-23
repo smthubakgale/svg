@@ -32,9 +32,9 @@ var om = false;
 var me;
 $("#mainSVG2").mousemove((ev)=>
 { 
-      if(op == true)
+      if(op == true || om == true)
       {
-          var oq = $('#mainSVG2').children().last();
+          var oq = (om == true) ? me : $('#mainSVG2').children().last();
           var x = ev.pageX - $('#mainSVG2').offset().left;
           var y = ev.pageY - $('#mainSVG2').offset().top;
 
@@ -42,9 +42,7 @@ $("#mainSVG2").mousemove((ev)=>
           oq.attr("x", x);
           oq.attr("y", y);
       }  
-    if(om == true){
-        
-    }
+     
 });
 
 $("#mainSVG2").mouseup((ev)=>
