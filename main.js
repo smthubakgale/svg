@@ -43,11 +43,24 @@ $("#mainSVG2").mousemove((ev)=>
     
 });
 
-$("#mainSVG2").mouseup(()=>
+$("#mainSVG2").mouseup((ev)=>
 { 
-      op = false; 
+      drop(ev);
 });
-$("#mainSVG2").mouseleave(()=>
+$("#mainSVG2").mouseleave((ev)=>
 { 
-      op = false; 
+      drop(ev);
 });
+
+function drop(ev)
+{
+    if(op == true)
+    {
+        var oq = $('#mainSVG2').children().last();
+        oq.on("click", function()
+        {
+            
+        });
+        op = false;
+    }
+}
