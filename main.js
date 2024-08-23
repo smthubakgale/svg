@@ -15,3 +15,5 @@ function objectCloneGet(ts)
     obj.attr("onclick",null);
     $('#mainSVG1').append(obj);
 }
+
+$("#mainSVG1").mouseenter(()=>{});
