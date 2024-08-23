@@ -7,13 +7,22 @@ $(window).on("load", function()
 });
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~DRAG AND DROP -- CHANGE PARENT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
-var isDragging = false;
+var os = null;
 function objectCloneGet(ts)
 { 
     isDragging = true;
-    var obj = $(ts).clone();
-    obj.attr("onclick",null);
-    $('#mainSVG1').append(obj);
+    os = $(ts).clone();
+    os.attr("onclick",null); 
+    
 }
 
-$("#mainSVG1").mouseenter(()=>{});
+$("#mainSVG1").mouseenter(()=>
+{
+      if(os != null)
+      {
+          var obj = os.clone();
+          os = null;
+          $('#mainSVG1').append(obj);
+      }  
+    
+});
