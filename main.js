@@ -46,7 +46,11 @@ $("#mainSVG2").mousemove((ev)=>
        var x = ev.pageX - $('#mainSVG2').offset().left;
        var y = ev.pageY - $('#mainSVG2').offset().top;
 
-       //console.log(x , y , typeof(oq));
+       var x1 = parseFloat(oq.attr("x"));
+       var y1 = parseFloat(oq.attr("y"));
+       var x2 = x;
+       var y2 = y;
+        
        oq.attr("x", x);
        oq.attr("y", y);
     }  
