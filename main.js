@@ -45,3 +45,7 @@ $("#mainSVG2").mouseup(()=>
 { 
       op = null; 
 });
+$("#mainSVG2").mouseleave(()=>
+{ 
+      op = null; 
+});
