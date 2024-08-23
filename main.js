@@ -3,11 +3,11 @@ $(window).on("load", function()
 {
     var meta = $("#mainSVG2 metadata").html();
     console.log(meta);
-    var xm = $($.parseXML(meta));
+    var doc = $.parseXML(meta));
 
-    xm.find("author").text("Gyatsu");
+    $(doc).find("author").text("Gyatsu");
 
-    meta = xm.text();
+    meta =str = (new XMLSerializer()).serializeToString(doc);
     console.log(meta);
     $("#mainSVG2 metadata").html(xm.text());
 });
