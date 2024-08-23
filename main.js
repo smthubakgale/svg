@@ -33,8 +33,8 @@ $("#mainSVG2").mousemove((ev)=>
       if(op == true)
       {
           var oq = $('#mainSVG2').children().last();
-          var x = ev.pageX;
-          var y = ev.pageY;
+          var x = ev.pageX - $('#mainSVG2').offset().left;
+          var y = ev.pageY - $('#mainSVG2').offset().top;
 
           console.log(x , y);
           oq.attr("x", x);
