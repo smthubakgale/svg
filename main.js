@@ -1,4 +1,10 @@
-
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~METADATA ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+$(window).on("load", function()
+{
+    var meta = $("#mainSVG2 metadata").html();
+    console.log(meta);
+    var xm = $($.parseXml(meta))
+});
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~DRAG AND DROP -- CHANGE PARENT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 var isDragging = false;
